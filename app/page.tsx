@@ -5,6 +5,7 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
+import Link from "next/link"
 import { nFormatter } from "@/lib/utils";
 
 export default async function Home() {
@@ -52,15 +53,11 @@ export default async function Home() {
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
             
-            <a
-              className="group flex max-w-fit items-center justify-center space-x-2 border  bg-blue-500 px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black rounded border-b-4 border-blue-700 hover:border-blue-500"
-              href="/render.tsx"
-              target="_blank"
-              rel="noopener noreferrer"
-            ><p>
-              <span className="font-semibold">Predicción</span>
-              </p>
-            </a>
+            <Link href="formulario">
+              <div className="group flex max-w-fit items-center justify-center space-x-2 border bg-blue-500 px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black rounded border-b-4 border-blue-700 hover:border-blue-500">
+                <span className="font-semibold">Predicción</span>
+              </div>
+            </Link>
             
             <a
               className="flex max-w-fit items-center justify-center space-x-2 rounded border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 border-b-4"
@@ -94,7 +91,7 @@ export default async function Home() {
             title={title}
             description={description}
             demo={
-              title === "Beautiful, reusable components" ? (
+              title === "Descripción" ? (
                 <ComponentGrid />
               ) : (
                 demo
@@ -110,37 +107,35 @@ export default async function Home() {
 
 const features = [
   {
-    title: "Beautiful, reusable components",
+    title: "Descripción del proyecto",
     description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://framer.com/motion)",
+      "Breve introducción sobre el [proposito del proyecto](https://nextjs.org/).",
     large: true,
   },
   {
-    title: "Performance first",
+    title: "Precisión del modelo",
     description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
+      "Descripción de como se recopilaron y utilizaron los datos para entrenar y evaluar el [modelo](https://nextjs.org/).",
     demo: <WebVitals />,
   },
   {
-    title: "One-click Deploy",
+    title: "Enfermedades cardiovasculares",
     description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
+      "Contenido educativo sobre las [enfermedades cardiovasculares](https://nextjs.org/).",
+      large: true,
     demo: (
-      <a href={DEPLOY_URL}>
-        <Image
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-          height={30}
-          unoptimized
-        />
-      </a>
+      
+      <Link href="formulario">
+              <div className="group flex max-w-fit items-center justify-center space-x-2 border bg-blue-500 px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black rounded border-b-4 border-blue-700 hover:border-blue-500">
+                <span className="font-semibold">Leer más...</span>
+              </div>
+            </Link>
     ),
   },
   {
-    title: "Built-in Auth + Database",
+    title: "Recursos adicionales",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "[Recursos](https://nextjs.org/) relacionados con las enfermedades cardiovasculares y desarrollo del modelo.",
     demo: (
       <div className="flex items-center justify-center space-x-20">
         <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
@@ -148,10 +143,12 @@ const features = [
       </div>
     ),
   },
+  
+  
   {
-    title: "Hooks, utilities, and more",
+    title: "Demostración interactiva",
     description:
-      "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
+      "[Demostración interactiva](https://nextjs.org/) del modelo predictivo.",
     demo: (
       <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
         <span className="font-mono font-semibold">useIntersectionObserver</span>
