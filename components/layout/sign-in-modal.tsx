@@ -34,8 +34,7 @@ const SignInModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">Sign In</h3>
           <p className="text-sm text-gray-500">
-            This is strictly for demo purposes - only your email and profile
-            picture will be stored.
+          Esto es estrictamente con fines de demostración: solo se almacenará tu correo electrónico y tu foto de perfil.
           </p>
         </div>
 
@@ -57,7 +56,7 @@ const SignInModal = ({
             ) : (
               <>
                 <Google className="h-5 w-5" />
-                <p>Sign In with Google</p>
+                <p>Iniciar sesión con Google</p>
               </>
             )}
           </button>
