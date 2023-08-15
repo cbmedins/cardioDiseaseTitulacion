@@ -24,20 +24,23 @@ export default function NavBar({ session }: { session: Session | null }) {
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/cardioMango.png"
+              src="/cardioBlue.png"
               alt="cardiovascularDisease logo"
               width="40"
               height="40"
               className="mr-2 rounded-sm"
             ></Image>
-            <Image
+            
+          </Link>
+          <Link href="/" className="flex font-display text-2xl">
+          <Image
               src="/UGLogo.png"
               alt="Universidad de Guayaquil logo"
               width="37"
               height="37"
               className="mr-2 rounded-sm"
             ></Image>
-          </Link>
+            </Link>
           <div>
             {session ? (
               <UserDropdown session={session} />
